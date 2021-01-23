@@ -1,0 +1,30 @@
+<input [(ngModel)]="title" type="text">
+{{title}}
+
+<input [(ngModel)]="power" type="text">
+{{power | exponential}}
+
+<div [ngSwitch]="title">
+  <p *ngSwitchCase="'Javier'"> este es Javier</p>
+  <p *ngSwitchCase="'Nico'"> este es Nico</p>
+  <p *ngSwitchCase="'Cris'"> este es Cris</p>
+</div>
+
+
+
+<div *ngIf="title !== 'Javier'">
+  Titulo es diferente que la palabra ingresada
+</div>
+
+
+<!-- ngFor -->
+
+<button (click)="addElement()" >Nuevo elemento</button>
+
+<ul >
+  <li *ngFor="let nombres of items; index as i" >
+    {{nombres}} {{i}}
+    <button (click)="deleteElement(i)">Borrar</button>
+  </li>
+</ul>
+
