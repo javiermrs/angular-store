@@ -4,8 +4,8 @@ import Swiper from 'swiper';
 
 @Component({
   selector: 'app-home',
-  templateUrl: './home.component.html',
-  styleUrls: ['./home.component.scss']
+  templateUrl: '../home/home.component.html', 
+  styleUrls: ['../home/home.component.scss']
 })
 export class HomeComponent implements OnInit, AfterViewInit {
 
