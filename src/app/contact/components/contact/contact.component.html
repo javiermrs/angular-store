@@ -1,2 +1,91 @@
+<div class="form-container">
+    <form class="form-contact" >
+        <mat-card class="shipping-card">
+          <mat-card-header>
+            <h2>CONTACT</h2>
+          </mat-card-header>
+          <mat-card-content>
+              <div class="row">
+                  <div class="col">
+                      <mat-form-field class="full-width">
+                          <input matInput placeholder="First name" formControlName="firstName">
+                          <mat-error >
+                              First name is <strong>required</strong>
+                            </mat-error>
+                        </mat-form-field>
+                    </div>
+                    <div class="col">
+                        <mat-form-field class="full-width">
+                            <input matInput placeholder="Last name" formControlName="lastName">
+                            <mat-error >
+                                Last name is <strong>required</strong>
+                            </mat-error>
+                        </mat-form-field>
+                    </div>
+                </div>
+                <div class="row">
+                  <div class="col">
+                    <mat-form-field class="full-width">
+                      <input matInput placeholder="E-mail" formControlName="E-mail">
+                    </mat-form-field>
+                  </div>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <mat-form-field class="full-width">
+                            <textarea matInput placeholder="Address" formControlName="address"></textarea>
+                            <mat-error >
+                                Address is <strong>required</strong>
+                  </mat-error>
+                </mat-form-field>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col">
+                <mat-form-field class="full-width">
+                  <input matInput placeholder="City" formControlName="city">
+                  <mat-error >
+                    City is <strong>required</strong>
+                  </mat-error>
+                </mat-form-field>
+              </div>
+              <div class="col">
+                <mat-form-field class="full-width">
+                  <mat-select placeholder="State" formControlName="state">
+                    <mat-option >
+                      <!-- {{ state.name }} -->
+                    </mat-option>
+                  </mat-select>
+                  <mat-error >
+                    State is <strong>required</strong>
+                  </mat-error>
+                </mat-form-field>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col">
+                <mat-form-field class="full-width">
+                  <input matInput #postalCode maxlength="5" placeholder="Postal Code" type="number" formControlName="postalCode">
+                  <mat-hint align="end">{{postalCode.value.length}} / 5</mat-hint>
+                </mat-form-field>
+              </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <mat-form-field class="full-width">
+                        <textarea matInput placeholder="Message" formControlName="Message"></textarea>
+                        <mat-error >
+                            Address is <strong>required</strong>
+              </mat-error>
+            </mat-form-field>
+          </div>
+        </div>
+          </mat-card-content>
+          <mat-card-actions>
+            <button mat-raised-button color="primary" type="submit">Submit</button>
+          </mat-card-actions>
+        </mat-card>
+      </form>
+</div>
 
-<p>contact works!</p>
+  
